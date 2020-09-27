@@ -12,6 +12,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " The fancy start screen for Vim
   " https://github.com/mhinz/vim-startify
   Plug 'mhinz/vim-startify'
+
+  " Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
+  " https://github.com/ryanoasis/vim-devicons
+  Plug 'ryanoasis/vim-devicons' " Always load the vim-devicons as the very last one
 call plug#end()
 
 " Automatically install missing plugins on startup
