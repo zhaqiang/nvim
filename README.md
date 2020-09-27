@@ -2,13 +2,14 @@
 
 When people ask me to recommend a text editor:
 
-![Editor to recommend](images/editor-to-recommend.jpeg)
+<p align="center"> <img src="images/editor-to-recommend.jpeg"> </p>
 
 ## Configurate
 
+> Don't put any lines in your vim configuration that you don't understand.
+
 ```
 git clone git@github.com:zhaqiang/nvim.git ~/.config/nvim
-ln -sfv ~/.config/nvim/vimrc ~/.vimrc
 ```
 
 ## References
