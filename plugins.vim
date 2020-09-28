@@ -21,6 +21,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/itchyny/lightline.vim
   Plug 'itchyny/lightline.vim'
 
+  " Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode
+  " https://github.com/neoclide/coc.nvim
+  Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+
   " Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
   " https://github.com/ryanoasis/vim-devicons
   Plug 'ryanoasis/vim-devicons' " Always load the vim-devicons as the very last one
