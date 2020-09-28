@@ -13,6 +13,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/mhinz/vim-startify
   Plug 'mhinz/vim-startify'
 
+  " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme
+  " https://github.com/joshdick/onedark.vim
+  Plug 'joshdick/onedark.vim'
+
+  " A light and configurable statusline/tabline plugin for Vim
+  " https://github.com/itchyny/lightline.vim
+  Plug 'itchyny/lightline.vim'
+
   " Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
   " https://github.com/ryanoasis/vim-devicons
   Plug 'ryanoasis/vim-devicons' " Always load the vim-devicons as the very last one
