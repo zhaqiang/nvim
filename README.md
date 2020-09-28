@@ -10,6 +10,7 @@ When people ask me to recommend a text editor:
 
 ```
 git clone git@github.com:zhaqiang/nvim.git ~/.config/nvim
+ln -sfv ~/.config/nvim/vimrc ~/.vimrc
 ```
 
 ## References
