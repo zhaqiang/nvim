@@ -21,6 +21,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/itchyny/lightline.vim
   Plug 'itchyny/lightline.vim'
 
+  " Vim plugin that shows keybindings in popup
+  " https://github.com/liuchengxu/vim-which-key
+  Plug 'liuchengxu/vim-which-key'
+
   " Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode
   " https://github.com/neoclide/coc.nvim
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }

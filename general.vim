@@ -6,7 +6,7 @@
 set nocompatible
 
 " With a map leader it's possible to do extra key combinations
-let mapleader = " " " SPACE
+let mapleader = "\<Space>"
 let maplocalleader = ","
 
 " Sets how many lines of history VIM has to remember
@@ -104,7 +104,7 @@ set tm=500
 set signcolumn=yes
 
 " Add a bit extra margin to the left
-set foldcolumn=2
+set foldcolumn=1
 
 " Enable mouse
 set mouse=a
