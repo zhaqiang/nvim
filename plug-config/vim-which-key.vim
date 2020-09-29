@@ -13,6 +13,8 @@ let g:which_key_sep = '→'
 nnoremap <leader>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
 let g:which_key_map['?'] = 'search word'
 
+let g:which_key_use_floating_win = 0
+
 highlight default link WhichKey          Operator
 highlight default link WhichKeySeperator DiffAdded
 highlight default link WhichKeyGroup     Identifier
@@ -38,7 +40,13 @@ let g:which_key_map.w = {
       \ 'name' : '+windows',
       \ '=' : ['<C-W>=', 'balance windows'],
       \ '-' : ['<C-W>s', 'split below'],
-      \ '|' : ['<C-W>v', 'split right']
+      \ '|' : ['<C-W>v', 'split right'],
+      \ 'd' : ['<C-W>c', 'delete window'],
+      \ 'H' : ['<C-W>5<', 'expand window left'],
+      \ 'J' : [':resize +5', 'expand window below'],
+      \ 'K' : [':resize -5', 'expand window up'],
+      \ 'L' : ['<C-W>5>', 'expand window right'],
+      \ 'w' : ['<C-W>w', 'other window']
       \ }
 
 " Register which key map
