@@ -8,8 +8,8 @@ map <C-l> <C-W>l
 map 0 ^
 
 " Fast moving between buffers
-map <leader>l :bnext<cr>
-map <leader>h :bprevious<cr>
+map <localleader>l :bnext<cr>
+map <localleader>h :bprevious<cr>
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
