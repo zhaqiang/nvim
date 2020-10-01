@@ -23,12 +23,23 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
-" Coc Search & refactor
-" nnoremap <leader>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
-" let g:which_key_map['?'] = 'search word'
+let g:which_key_map['/'] = [':RG', 'global search']
+let g:which_key_map['d'] = [':Bdelete'  , 'delete buffer']
 
-" Fast searching
-let g:which_key_map['/'] = [ ':RG'                    , 'global search' ]
+" b is for buffer
+let g:which_key_map.b = {
+      \ 'name' : '+buffer' ,
+      \ '1' : ['b1'        , 'buffer 1'],
+      \ '2' : ['b2'        , 'buffer 2'],
+      \ 'd' : [':Bdelete'  , 'delete buffer'],
+      \ 'f' : ['bfirst'    , 'first buffer'],
+      \ 'h' : ['Startify'  , 'home buffer'],
+      \ 'l' : ['blast'     , 'last buffer'],
+      \ 'n' : ['bnext'     , 'next buffer'],
+      \ 'p' : ['bprevious' , 'previous buffer'],
+      \ 's' : ['Buffers'   , 'search buffer'],
+      \ 'w' : [':Bwipeout' , 'wipeout buffer']
+      \ }
 
 " f is for files
 let g:which_key_map.f = {
@@ -77,6 +88,7 @@ let g:which_key_map.w = {
       \ 'J' : [':resize +5', 'expand window below'],
       \ 'K' : [':resize -5', 'expand window up'],
       \ 'L' : ['<C-W>5>', 'expand window right'],
+      \ 'm' : [':call WindowSwap#EasyWindowSwap()'  , 'move window'],
       \ 'w' : ['<C-W>w', 'other window']
       \ }
 

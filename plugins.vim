@@ -21,6 +21,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/itchyny/lightline.vim
   Plug 'itchyny/lightline.vim'
 
+  " Tabline customization with buffer filtering
+  " https://github.com/mg979/vim-xtabline
+  Plug 'mg979/vim-xtabline'
+
+  " Delete buffers and close files in Vim without closing your windows or messing up your layout
+  " https://github.com/moll/vim-bbye
+  Plug 'moll/vim-bbye'
+
+  " Swap your windows without ruining your layout
+  " https://github.com/wesQ3/vim-windowswap
+  Plug 'wesQ3/vim-windowswap'
+
   " Vim plugin that shows keybindings in popup
   " https://github.com/liuchengxu/vim-which-key
   Plug 'liuchengxu/vim-which-key'
