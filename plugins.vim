@@ -38,9 +38,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/tpope/vim-fugitive
   Plug 'tpope/vim-fugitive'
 
-  " UltiSnips - The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips
-  " https://github.com/SirVer/ultisnips
-  Plug 'SirVer/ultisnips'
+  " vim-snipmate default snippets (Previously snipmate-snippets)
+  " https://github.com/honza/vim-snippets
+  Plug 'honza/vim-snippets'
 
   " Better whitespace highlighting for Vim
   " https://github.com/ntpeters/vim-better-whitespace

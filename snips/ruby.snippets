@@ -1,0 +1,33 @@
+snippet mcla "class .. < ApplicationRecord .. end"
+# frozen_string_literal: true
+
+class $0 < ApplicationRecord
+	# constants
+
+	# concerns
+
+	# attr related macros
+
+	# association macros
+
+	# validation macros
+
+	# callbacks
+
+	# other macros
+
+	# scopes
+
+	# class methods
+
+	# instance methods
+end
+endsnippet
+
+snippet hasm "has_many name, dependent" b
+has_many :$0, dependent: :destroy
+endsnippet
+
+snippet haso "has_one name, dependent" b
+has_one :$0, dependent: :destroy
+endsnippet
