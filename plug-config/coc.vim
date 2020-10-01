@@ -5,7 +5,6 @@ let g:coc_global_extensions = [
       \ 'coc-cssmodules',
       \ 'coc-explorer',
       \ 'coc-emmet',
-      \ 'coc-git',
       \ 'coc-html',
       \ 'coc-json',
       \ 'coc-lists',
