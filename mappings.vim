@@ -44,6 +44,11 @@ nmap <localleader>q :q<cr>
 nmap <M-j> mz:m+<cr>`z
 nmap <M-k> mz:m-2<cr>`z
 
+" TAB in general mode will move to text buffer
+nnoremap <silent> <TAB> :bnext<CR>
+" SHIFT-TAB will go back
+nnoremap <silent> <S-TAB> :bprevious<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Insert mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -66,3 +71,7 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
 vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
 vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+" Better indenting
+vnoremap < <gv
+vnoremap > >gv
