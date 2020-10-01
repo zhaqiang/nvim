@@ -9,10 +9,7 @@ let g:which_key_map =  {}
 " Define a separator
 let g:which_key_sep = '→'
 
-" Coc Search & refactor
-nnoremap <leader>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
-let g:which_key_map['?'] = 'search word'
-
+" No floating window
 let g:which_key_use_floating_win = 0
 
 highlight default link WhichKey          Operator
@@ -26,6 +23,12 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
   \| autocmd BufLeave <buffer> set laststatus=2 noshowmode ruler
 
 " Single mappings
+" Coc Search & refactor
+" nnoremap <leader>? :CocSearch <C-R>=expand("<cword>")<CR><CR>
+" let g:which_key_map['?'] = 'search word'
+
+" Fast searching
+let g:which_key_map['/'] = [ ':RG'                    , 'global search' ]
 
 " f is for files
 let g:which_key_map.f = {
@@ -33,6 +36,34 @@ let g:which_key_map.f = {
       \ 'e' : [':CocCommand explorer', 'file explorer'],
       \ 'E' : [':edit $MYVIMRC', 'open init.vim'],
       \ 'R' : [':source $MYVIMRC', 'reload init.vim']
+      \ }
+
+" s is for search
+let g:which_key_map.s = {
+      \ 'name' : '+search' ,
+      \ '/' : [':History/'              , 'history'],
+      \ ';' : [':Commands'              , 'commands'],
+      \ 'b' : [':BLines'                , 'current buffer'],
+      \ 'B' : [':Buffers'               , 'open buffers'],
+      \ 'c' : [':Commits'               , 'commits'],
+      \ 'C' : [':BCommits'              , 'buffer commits'],
+      \ 'f' : [':Files'                 , 'files'],
+      \ 'g' : [':GFiles'                , 'git files'],
+      \ 'G' : [':GFiles?'               , 'modified git files'],
+      \ 'h' : [':History'               , 'file history'],
+      \ 'H' : [':History:'              , 'command history'],
+      \ 'l' : [':Lines'                 , 'lines'] ,
+      \ 'm' : [':Marks'                 , 'marks'] ,
+      \ 'M' : [':Maps'                  , 'normal maps'] ,
+      \ 'p' : [':Helptags'              , 'help tags'] ,
+      \ 'P' : [':Tags'                  , 'project tags'],
+      \ 's' : [':CocList snippets'      , 'snippets'],
+      \ 'S' : [':Colors'                , 'color schemes'],
+      \ 't' : [':RG'                    , 'global text'],
+      \ 'T' : [':BTags'                 , 'buffer tags'],
+      \ 'w' : [':Windows'               , 'search windows'],
+      \ 'y' : [':Filetypes'             , 'file types'],
+      \ 'z' : [':FZF'                   , 'FZF'],
       \ }
 
 " w is for windows

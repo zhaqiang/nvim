@@ -5,6 +5,7 @@ let g:coc_global_extensions = [
   \ 'coc-cssmodules',
   \ 'coc-explorer',
   \ 'coc-emmet',
+  \ 'coc-git',
   \ 'coc-html',
   \ 'coc-json',
   \ 'coc-lists',
@@ -74,7 +75,7 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 
-augroup mygroup
+augroup coc-format-selected
   autocmd!
   " Setup formatexpr specified filetype(s).
   autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')

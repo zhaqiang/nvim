@@ -29,6 +29,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/neoclide/coc.nvim
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
+  " Fuzzy finder
+  " https://github.com/junegunn/fzf.vim
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+
+  " fugitive.vim: A Git wrapper so awesome, it should be illegal
+  " https://github.com/tpope/vim-fugitive
+  Plug 'tpope/vim-fugitive'
+
+  " UltiSnips - The ultimate snippet solution for Vim. Send pull requests to SirVer/ultisnips
+  " https://github.com/SirVer/ultisnips
+  Plug 'SirVer/ultisnips'
+
   " Better whitespace highlighting for Vim
   " https://github.com/ntpeters/vim-better-whitespace
   Plug 'ntpeters/vim-better-whitespace'
