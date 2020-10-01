@@ -8,4 +8,5 @@ source $HOME/.config/nvim/plug-config/vim-startify.vim
 source $HOME/.config/nvim/plug-config/lightline.vim
 source $HOME/.config/nvim/plug-config/vim-better-whitespace.vim
 source $HOME/.config/nvim/plug-config/vim-which-key.vim
+source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/fzf.vim

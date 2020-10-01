@@ -1,8 +1,3 @@
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
 
 " Remap VIM 0 to first non-blank character
 map 0 ^
@@ -28,6 +23,12 @@ map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Normal mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Smart way to move between windows
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
 
 " Fast saving
 nmap <localleader>w :w!<cr>

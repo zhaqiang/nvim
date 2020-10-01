@@ -1,38 +1,24 @@
 " https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
 let g:coc_global_extensions = [
-  \ 'coc-actions',
-  \ 'coc-css',
-  \ 'coc-cssmodules',
-  \ 'coc-explorer',
-  \ 'coc-emmet',
-  \ 'coc-git',
-  \ 'coc-html',
-  \ 'coc-json',
-  \ 'coc-lists',
-  \ 'coc-svg',
-  \ 'coc-snippets',
-  \ 'coc-tasks',
-  \ 'coc-xml',
-  \ 'coc-yaml',
-  \ 'coc-yank',
-  \ ]
+      \ 'coc-actions',
+      \ 'coc-css',
+      \ 'coc-cssmodules',
+      \ 'coc-explorer',
+      \ 'coc-emmet',
+      \ 'coc-git',
+      \ 'coc-html',
+      \ 'coc-json',
+      \ 'coc-lists',
+      \ 'coc-svg',
+      \ 'coc-snippets',
+      \ 'coc-tasks',
+      \ 'coc-xml',
+      \ 'coc-yaml',
+      \ 'coc-yank',
+      \ ]
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
 
 " Use <c-\> to trigger completion.
 inoremap <silent><expr> <c-\> coc#refresh()
@@ -71,10 +57,6 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
 augroup coc-format-selected
   autocmd!
   " Setup formatexpr specified filetype(s).
@@ -97,20 +79,61 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Explorer
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:coc_explorer_global_presets = {
+      \   'floating': {
+      \      'position': 'floating',
+      \   },
+      \   'floatingLeftside': {
+      \      'position': 'floating',
+      \      'floating-position': 'left-center',
+      \      'floating-width': 30,
+      \   },
+      \   'floatingRightside': {
+      \      'position': 'floating',
+      \      'floating-position': 'right-center',
+      \      'floating-width': 30,
+      \   },
+      \   'simplify': {
+      \     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+      \   }
+      \ }
+
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" coc-snippets: https://github.com/neoclide/coc-snippets
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
