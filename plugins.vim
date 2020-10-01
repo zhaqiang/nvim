@@ -9,6 +9,11 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
   " Make sure you use single quotes
 
+  " Enable repeating supported plugin maps with "."
+  " https://github.com/tpope/vim-repeat
+  Plug 'tpope/vim-repeat'
+
+
   " The fancy start screen for Vim
   " https://github.com/mhinz/vim-startify
   Plug 'mhinz/vim-startify'
@@ -46,13 +51,33 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
 
-  " fugitive.vim: A Git wrapper so awesome, it should be illegal
+  " A Git wrapper so awesome, it should be illegal
   " https://github.com/tpope/vim-fugitive
   Plug 'tpope/vim-fugitive'
+
+  " A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks
+  " https://github.com/airblade/vim-gitgutter
+  Plug 'airblade/vim-gitgutter'
+
+  " A git commit browser in Vim
+  " https://github.com/junegunn/gv.vim
+  Plug 'junegunn/gv.vim'
+
+  " Vim and Neovim plugin to reveal the commit messages under the cursor
+  " https://github.com/rhysd/git-messenger.vim
+  Plug 'rhysd/git-messenger.vim'
+
+  " GitHub extension for fugitive.vim
+  " https://github.com/tpope/vim-rhubarb
+  Plug 'tpope/vim-rhubarb'
 
   " vim-snipmate default snippets (Previously snipmate-snippets)
   " https://github.com/honza/vim-snippets
   Plug 'honza/vim-snippets'
+
+  " A vim plugin to display the indention levels with thin vertical lines
+  " https://github.com/Yggdroot/indentLine
+  Plug 'Yggdroot/indentLine'
 
   " Better whitespace highlighting for Vim
   " https://github.com/ntpeters/vim-better-whitespace
