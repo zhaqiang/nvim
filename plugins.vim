@@ -51,6 +51,14 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
 
+  " Changes Vim working directory to project root
+  " https://github.com/airblade/vim-rooter
+  Plug 'airblade/vim-rooter'
+
+  " Helpers for UNIX
+  " https://github.com/tpope/vim-eunuch
+  Plug 'tpop/vim-eunuch'
+
   " A Git wrapper so awesome, it should be illegal
   " https://github.com/tpope/vim-fugitive
   Plug 'tpope/vim-fugitive'
