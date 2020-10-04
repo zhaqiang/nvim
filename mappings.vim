@@ -6,20 +6,6 @@ map 0 ^
 map <localleader>l :bnext<cr>
 map <localleader>h :bprevious<cr>
 
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
-
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-map <leader>t<leader> :tabnext
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>/
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Normal mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -63,6 +49,9 @@ imap <c-f> <esc>la
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Fast saving
+vmap <localleader>w :w!<cr>
 
 " Pressing * or # searches for the current selection
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>

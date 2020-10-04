@@ -25,12 +25,24 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 " Single mappings
 let g:which_key_map['/'] = [':RG', 'global search']
 let g:which_key_map['d'] = [':Bdelete'  , 'delete buffer']
+let g:which_key_map['q'] = [':q', 'quit']
+let g:which_key_map['Q'] = [':qall!', 'quit all!']
+
+" a is for actions
+let g:which_key_map.a = {
+      \ 'name' : '+actions' ,
+      \ 'c' : [':HexokinaseToggle'       , 'toggle colorizer'],
+      \ 'h' : [':checkhealth'            , 'check health'],
+      \ 's' : [':let @/ = ""'            , 'remove search highlight'],
+      \ 't' : [':FloatermToggle'         , 'terminal'],
+      \ 'u' : [':UndotreeToggle'         , 'undo tree'],
+      \ 'v' : [':Codi'                   , 'virtual repl on'],
+      \ 'V' : [':Codi!'                  , 'virtual repl off'],
+      \ }
 
 " b is for buffer
 let g:which_key_map.b = {
       \ 'name' : '+buffer' ,
-      \ '1' : ['b1'        , 'buffer 1'],
-      \ '2' : ['b2'        , 'buffer 2'],
       \ 'd' : [':Bdelete'  , 'delete buffer'],
       \ 'f' : ['bfirst'    , 'first buffer'],
       \ 'h' : ['Startify'  , 'home buffer'],
@@ -52,18 +64,16 @@ let g:which_key_map.f = {
 " g is for git
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
-      \ 'a' : [':Git add .'                        , 'add all'],
-      \ 'A' : [':Git add %'                        , 'add current'],
+      \ 'a' : [':Git add %'                        , 'add current'],
+      \ 'A' : [':Git add .'                        , 'add all'],
       \ 'b' : [':Git blame'                        , 'blame'],
       \ 'B' : [':GBrowse'                          , 'browse'],
       \ 'c' : [':Git commit'                       , 'commit'],
       \ 'd' : [':Git diff'                         , 'diff'],
       \ 'D' : [':Gdiffsplit'                       , 'diff split'],
       \ 'g' : [':GGrep'                            , 'git grep'],
-      \ 'G' : [':Gstatus'                          , 'status'],
       \ 'h' : [':GitGutterLineHighlightsToggle'    , 'highlight hunks'],
       \ 'H' : ['<Plug>(GitGutterPreviewHunk)'      , 'preview hunk'],
-      \ 'i' : [':Gist -b'                          , 'post gist'],
       \ 'j' : ['<Plug>(GitGutterNextHunk)'         , 'next hunk'],
       \ 'k' : ['<Plug>(GitGutterPrevHunk)'         , 'prev hunk'],
       \ 'l' : [':Git log'                          , 'log'],
@@ -71,14 +81,86 @@ let g:which_key_map.g = {
       \ 'p' : [':Git push'                         , 'push'],
       \ 'P' : [':Git pull'                         , 'pull'],
       \ 'r' : [':GRemove'                          , 'remove'],
-      \ 's' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
-      \ 'S' : [':!git status'                      , 'status'],
+      \ 's' : [':Gstatus'                          , 'status'],
+      \ 'S' : ['<Plug>(GitGutterStageHunk)'        , 'stage hunk'],
       \ 't' : [':GitGutterSignsToggle'             , 'toggle signs'],
       \ 'u' : ['<Plug>(GitGutterUndoHunk)'         , 'undo hunk'],
       \ 'v' : [':GV'                               , 'view commits'],
       \ 'V' : [':GV!'                              , 'view buffer commits'],
       \ }
 
+" l is for LSP (language server protocol)
+let g:which_key_map.l = {
+      \ 'name' : '+lsp' ,
+      \ '.' : [':CocConfig'                          , 'config'],
+      \ ';' : ['<Plug>(coc-refactor)'                , 'refactor'],
+      \ 'a' : ['<Plug>(coc-codeaction)'              , 'line action'],
+      \ 'A' : ['<Plug>(coc-codeaction-selected)'     , 'selected action'],
+      \ 'b' : [':CocNext'                            , 'next action'],
+      \ 'B' : [':CocPrev'                            , 'prev action'],
+      \ 'c' : [':CocList commands'                   , 'commands'],
+      \ 'd' : ['<Plug>(coc-definition)'              , 'definition'],
+      \ 'D' : ['<Plug>(coc-declaration)'             , 'declaration'],
+      \ 'e' : [':CocList extensions'                 , 'extensions'],
+      \ 'f' : ['<Plug>(coc-format-selected)'         , 'format selected'],
+      \ 'F' : ['<Plug>(coc-format)'                  , 'format'],
+      \ 'h' : ['<Plug>(coc-float-hide)'              , 'hide'],
+      \ 'i' : ['<Plug>(coc-implementation)'          , 'implementation'],
+      \ 'I' : [':CocList diagnostics'                , 'diagnostics'],
+      \ 'j' : ['<Plug>(coc-float-jump)'              , 'float jump'],
+      \ 'l' : ['<Plug>(coc-codelens-action)'         , 'code lens'],
+      \ 'n' : ['<Plug>(coc-diagnostic-next)'         , 'next diagnostic'],
+      \ 'N' : ['<Plug>(coc-diagnostic-next-error)'   , 'next error'],
+      \ 'o' : [':Vista!!'                            , 'outline'],
+      \ 'O' : [':CocList outline'                    , 'outline'],
+      \ 'p' : ['<Plug>(coc-diagnostic-prev)'         , 'prev diagnostic'],
+      \ 'P' : ['<Plug>(coc-diagnostic-prev-error)'   , 'prev error'],
+      \ 'q' : ['<Plug>(coc-fix-current)'             , 'quickfix'],
+      \ 'r' : ['<Plug>(coc-references)'              , 'references'],
+      \ 'R' : ['<Plug>(coc-rename)'                  , 'rename'],
+      \ 's' : [':CocList -I symbols'                 , 'references'],
+      \ 'S' : [':CocList snippets'                   , 'snippets'],
+      \ 't' : ['<Plug>(coc-type-definition)'         , 'type definition'],
+      \ 'u' : [':CocListResume'                      , 'resume list'],
+      \ 'U' : [':CocUpdate'                          , 'update CoC'],
+      \ 'z' : [':CocDisable'                         , 'disable CoC'],
+      \ 'Z' : [':CocEnable'                          , 'enable CoC'],
+      \ }
+
+" t is for tab
+let g:which_key_map.t = {
+      \ 'name' : '+tabline' ,
+      \ 'b' : [':XTabListBuffers'         , 'list buffers'],
+      \ 'd' : [':XTabCloseBuffer'         , 'close buffer'],
+      \ 'D' : [':XTabDeleteTab'           , 'close tab'],
+      \ 'h' : [':XTabHideBuffer'          , 'hide buffer'],
+      \ 'i' : [':XTabInfo'                , 'info'],
+      \ 'l' : [':XTabLock'                , 'lock tab'],
+      \ 'm' : [':XTabMode'                , 'toggle mode'],
+      \ 'n' : [':tabNext'                 , 'next tab'],
+      \ 'N' : [':XTabMoveBufferNext'      , 'buffer->'],
+      \ 't' : [':tabnew'                  , 'new tab'],
+      \ 'p' : [':tabprevious'             , 'prev tab'],
+      \ 'P' : [':XTabMoveBufferPrev'      , '<-buffer'],
+      \ 'x' : [':XTabPinBuffer'           , 'pin buffer'],
+      \ }
+
+" T is for Terminal
+let g:which_key_map.T = {
+      \ 'name' : '+terminal' ,
+      \ ';' : [':FloatermNew --wintype=normal --height=6'       , 'terminal'],
+      \ 'f' : [':FloatermNew fzf'                               , 'fzf'],
+      \ 'g' : [':FloatermNew lazygit'                           , 'git'],
+      \ 'd' : [':FloatermNew lazydocker'                        , 'docker'],
+      \ 'n' : [':FloatermNew node'                              , 'node'],
+      \ 'N' : [':FloatermNew nnn'                               , 'nnn'],
+      \ 'p' : [':FloatermNew python'                            , 'python'],
+      \ 'm' : [':FloatermNew lazynpm'                           , 'npm'],
+      \ 'r' : [':FloatermNew ranger'                            , 'ranger'],
+      \ 't' : [':FloatermToggle'                                , 'toggle'],
+      \ 'y' : [':FloatermNew ytop'                              , 'ytop'],
+      \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
+      \ }
 
 " s is for search
 let g:which_key_map.s = {
@@ -119,6 +201,8 @@ let g:which_key_map.w = {
       \ 'J' : [':resize +5', 'expand window below'],
       \ 'K' : [':resize -5', 'expand window up'],
       \ 'L' : ['<C-W>5>', 'expand window right'],
+      \ 'p' : [':call WindowSwap#DoWindowSwap()', 'do win swap'],
+      \ 'y' : [':call WindowSwap#MarkWindowSwap()', 'mark win swap'],
       \ 'm' : [':call WindowSwap#EasyWindowSwap()'  , 'move window'],
       \ 'w' : ['<C-W>w', 'other window']
       \ }

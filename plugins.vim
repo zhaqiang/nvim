@@ -13,6 +13,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/tpope/vim-repeat
   Plug 'tpope/vim-repeat'
 
+  " Smooth scrolling for Vim done right
+  " https://github.com/psliwka/vim-smoothie
+  Plug 'psliwka/vim-smoothie'
 
   " The fancy start screen for Vim
   " https://github.com/mhinz/vim-startify
@@ -21,6 +24,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme
   " https://github.com/joshdick/onedark.vim
   Plug 'joshdick/onedark.vim'
+
+  " A solid language pack for Vim
+  " https://github.com/sheerun/vim-polyglot
+  " Plug 'sheerun/vim-polyglot'
 
   " A light and configurable statusline/tabline plugin for Vim
   " https://github.com/itchyny/lightline.vim
@@ -46,10 +53,22 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/neoclide/coc.nvim
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
+  " The interactive scratchpad for hackers
+  " https://github.com/metakirby5/codi.vim
+  Plug 'metakirby5/codi.vim'
+
   " Fuzzy finder
   " https://github.com/junegunn/fzf.vim
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
   Plug 'junegunn/fzf.vim'
+
+  " Viewer & Finder for LSP symbols and tags
+  " https://github.com/liuchengxu/vista.vim
+  Plug 'liuchengxu/vista.vim'
+
+  " Lightning fast left-right movement in Vim
+  " https://github.com/unblevable/quick-scope
+  Plug 'unblevable/quick-scope'
 
   " Changes Vim working directory to project root
   " https://github.com/airblade/vim-rooter
@@ -57,7 +76,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   " Helpers for UNIX
   " https://github.com/tpope/vim-eunuch
-  Plug 'tpop/vim-eunuch'
+  Plug 'tpope/vim-eunuch'
 
   " A Git wrapper so awesome, it should be illegal
   " https://github.com/tpope/vim-fugitive
@@ -87,9 +106,37 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/Yggdroot/indentLine
   Plug 'Yggdroot/indentLine'
 
+  " The undo history visualizer for VIM
+  " https://github.com/mbbill/undotree
+  Plug 'mbbill/undotree'
+
+  " Multiple cursors plugin for vim/neovim
+  " https://github.com/mg979/vim-visual-multi
+  Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
+
   " Better whitespace highlighting for Vim
   " https://github.com/ntpeters/vim-better-whitespace
   Plug 'ntpeters/vim-better-whitespace'
+
+  " Comment stuff out
+  " https://github.com/tpope/vim-commentary
+  Plug 'tpope/vim-commentary'
+
+  " Auto close (X)HTML tags
+  " https://github.com/alvan/vim-closetag
+  Plug 'alvan/vim-closetag'
+
+  " Change an HTML(ish) opening tag and take the closing one along as well
+  " https://github.com/AndrewRadev/tagalong.vim
+  Plug 'AndrewRadev/tagalong.vim'
+
+  " The fastest (Neo)Vim plugin for asynchronously displaying the colours in the file
+  " https://github.com/RRethy/vim-hexokinase
+  Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+  " Use nvim/vim's builtin terminal in the floating/popup window
+  " https://github.com/voldikss/vim-floaterm
+  Plug 'voldikss/vim-floaterm'
 
   " Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
   " https://github.com/ryanoasis/vim-devicons
