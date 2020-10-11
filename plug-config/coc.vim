@@ -1,25 +1,31 @@
 " https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
 let g:coc_global_extensions = [
       \ 'coc-actions',
+      \ 'coc-bookmark',
       \ 'coc-css',
       \ 'coc-cssmodules',
       \ 'coc-diagnostic',
       \ 'coc-explorer',
       \ 'coc-emmet',
       \ 'coc-floaterm',
+      \ 'coc-go',
       \ 'coc-html',
       \ 'coc-json',
       \ 'coc-lists',
       \ 'coc-prettier',
       \ 'coc-svg',
       \ 'coc-snippets',
+      \ 'coc-solargraph',
+      \ 'coc-sql',
       \ 'coc-tasks',
+      \ 'coc-toml',
       \ 'coc-tslint-plugin',
       \ 'coc-tsserver',
       \ 'coc-vetur',
       \ 'coc-vimlsp',
       \ 'coc-xml',
       \ 'coc-yaml',
+      \ 'coc-marketplace'
       \ ]
 
 " Don't pass messages to |ins-completion-menu|.

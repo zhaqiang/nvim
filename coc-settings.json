@@ -20,5 +20,6 @@
     "UltiSnips",
     "~/.config/nvim/snips",
     "gosnippets/UltiSnips"
-  ]
+  ],
+  "coc.preferences.extensionUpdateCheck": "daily"
 }
