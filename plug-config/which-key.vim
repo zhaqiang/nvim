@@ -33,6 +33,7 @@ let g:which_key_map.a = {
       \ 'name' : '+actions' ,
       \ 'c' : [':HexokinaseToggle'       , 'toggle colorizer'],
       \ 'h' : [':checkhealth'            , 'check health'],
+      \ 'm' : [':CocList marketplace'    , 'coc marketplace'],
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
       \ 't' : [':FloatermToggle'         , 'terminal'],
       \ 'u' : [':UndotreeToggle'         , 'undo tree'],
