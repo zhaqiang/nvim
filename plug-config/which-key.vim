@@ -24,6 +24,7 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 " Single mappings
 let g:which_key_map['/'] = [':RG', 'global search']
+let g:which_key_map['e'] = [':CocCommand explorer'      , 'file explorer']
 let g:which_key_map['d'] = [':Bdelete'  , 'delete buffer']
 let g:which_key_map['q'] = [':q', 'quit']
 let g:which_key_map['Q'] = [':qall!', 'quit all!']
@@ -32,8 +33,11 @@ let g:which_key_map['Q'] = [':qall!', 'quit all!']
 let g:which_key_map.a = {
       \ 'name' : '+actions' ,
       \ 'c' : [':HexokinaseToggle'       , 'toggle colorizer'],
+      \ 'e' : [':CocCommand explorer'      , 'file explorer'],
+      \ 'E' : [':edit $MYVIMRC'            , 'open init.vim'],
       \ 'h' : [':checkhealth'            , 'check health'],
       \ 'm' : [':CocList marketplace'    , 'coc marketplace'],
+      \ 'R' : [':source $MYVIMRC'          , 'reload init.vim'],
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
       \ 't' : [':FloatermToggle'         , 'terminal'],
       \ 'u' : [':UndotreeToggle'         , 'undo tree'],
@@ -54,12 +58,11 @@ let g:which_key_map.b = {
       \ 'w' : [':Bwipeout' , 'wipeout buffer']
       \ }
 
-" f is for files
+" f is for find and replace
 let g:which_key_map.f = {
-      \ 'name' : '+files',
-      \ 'e' : [':CocCommand explorer', 'file explorer'],
-      \ 'E' : [':edit $MYVIMRC', 'open init.vim'],
-      \ 'R' : [':source $MYVIMRC', 'reload init.vim']
+      \ 'name' : '+find & replace',
+      \ 'b' : [':Farr --source=vimgrep'    , 'buffer find/replace'],
+      \ 'p' : [':Farr --source=rgnvim'     , 'project find/replace'],
       \ }
 
 " g is for git
