@@ -118,6 +118,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/ntpeters/vim-better-whitespace
   Plug 'ntpeters/vim-better-whitespace'
 
+  " Find And Replace Vim plugin
+  " https://github.com/brooth/far.vim
+  Plug 'brooth/far.vim'
+
   " Comment stuff out
   " https://github.com/tpope/vim-commentary
   Plug 'tpope/vim-commentary'
