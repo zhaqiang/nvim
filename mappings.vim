@@ -24,7 +24,7 @@ nmap <localleader>w :w!<cr>
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 " Fast quiting
-nmap <localleader>q :q<cr>
+nmap <localleader>q :<C-W>q
 
 " Move a line of text using ALT+[jk] or Command+[jk] on mac
 nmap <M-j> mz:m+<cr>`z
