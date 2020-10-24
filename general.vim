@@ -214,3 +214,10 @@ try
   set stal=2
 catch
 endtry
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => MISC
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Stop newline continution of comments
+set formatoptions-=cro
