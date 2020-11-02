@@ -53,10 +53,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/neoclide/coc.nvim
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
-  " The interactive scratchpad for hackers
-  " https://github.com/metakirby5/codi.vim
-  Plug 'metakirby5/codi.vim'
-
   " Fuzzy finder
   " https://github.com/junegunn/fzf.vim
   Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -117,10 +113,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Better whitespace highlighting for Vim
   " https://github.com/ntpeters/vim-better-whitespace
   Plug 'ntpeters/vim-better-whitespace'
-
-  " Find And Replace Vim plugin
-  " https://github.com/brooth/far.vim
-  Plug 'brooth/far.vim'
 
   " Comment stuff out
   " https://github.com/tpope/vim-commentary
