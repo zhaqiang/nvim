@@ -6,7 +6,6 @@ source $HOME/.config/nvim/plugins.vim
 " vim-plug configuration
 source $HOME/.config/nvim/plug-config/better-whitespace.vim
 source $HOME/.config/nvim/plug-config/coc.vim
-source $HOME/.config/nvim/plug-config/codi.vim
 source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/git-messenger.vim

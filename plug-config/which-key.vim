@@ -33,16 +33,14 @@ let g:which_key_map['Q'] = [':qall!', 'quit all!']
 let g:which_key_map.a = {
       \ 'name' : '+actions' ,
       \ 'c' : [':HexokinaseToggle'       , 'toggle colorizer'],
-      \ 'e' : [':CocCommand explorer'      , 'file explorer'],
-      \ 'E' : [':edit $MYVIMRC'            , 'open init.vim'],
+      \ 'e' : [':CocCommand explorer'    , 'file explorer'],
+      \ 'E' : [':edit $MYVIMRC'          , 'open init.vim'],
       \ 'h' : [':checkhealth'            , 'check health'],
       \ 'm' : [':CocList marketplace'    , 'coc marketplace'],
-      \ 'R' : [':source $MYVIMRC'          , 'reload init.vim'],
+      \ 'R' : [':source $MYVIMRC'        , 'reload init.vim'],
       \ 's' : [':let @/ = ""'            , 'remove search highlight'],
       \ 't' : [':FloatermToggle'         , 'terminal'],
       \ 'u' : [':UndotreeToggle'         , 'undo tree'],
-      \ 'v' : [':Codi'                   , 'virtual repl on'],
-      \ 'V' : [':Codi!'                  , 'virtual repl off'],
       \ }
 
 " b is for buffer
@@ -58,13 +56,6 @@ let g:which_key_map.b = {
       \ 'w' : [':Bwipeout' , 'wipeout buffer']
       \ }
 
-" f is for find and replace
-let g:which_key_map.f = {
-      \ 'name' : '+find & replace',
-      \ 'b' : [':Farr --source=vimgrep'    , 'buffer find/replace'],
-      \ 'p' : [':Farr --source=rgnvim'     , 'project find/replace'],
-      \ }
-
 " g is for git
 let g:which_key_map.g = {
       \ 'name' : '+git' ,
@@ -72,9 +63,10 @@ let g:which_key_map.g = {
       \ 'A' : [':Git add .'                        , 'add all'],
       \ 'b' : [':Git blame'                        , 'blame'],
       \ 'B' : [':GBrowse'                          , 'browse'],
-      \ 'c' : [':Git commit'                       , 'commit'],
-      \ 'd' : [':Git diff'                         , 'diff'],
-      \ 'D' : [':Gdiffsplit'                       , 'diff split'],
+      \ 'c' : [':Git diff --cached'                , 'diff cached'],
+      \ 'C' : [':Git commit'                       , 'commit'],
+      \ 'd' : [':Gdiffsplit'                       , 'diff split'],
+      \ 'D' : [':Git diff'                         , 'diff'],
       \ 'g' : [':GGrep'                            , 'git grep'],
       \ 'h' : [':GitGutterLineHighlightsToggle'    , 'highlight hunks'],
       \ 'H' : ['<Plug>(GitGutterPreviewHunk)'      , 'preview hunk'],
