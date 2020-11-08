@@ -1,36 +1,24 @@
+" Ref: https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Basic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Necesary for lots of cool vim things
-set nocompatible
-
-" With a map leader it's possible to do extra key combinations
-let mapleader = "\<Space>"
-let maplocalleader = ","
-
 " Sets how many lines of history VIM has to remember
-set history=500
+set history=999
 
 " Enable filetype plugins
 filetype plugin on
+
+" Set to auto read when a file is changed from the outside
+set autoread
+au FocusGained,BufEnter * checktime
 
 " Copy paste between vim and everything else
 set clipboard+=unnamedplus
 
 " Command-line completion on pressing <Tab>
 set wildmenu
-
-" Ignore compiled files
-set wildignore=*.o,*~,*.pyc
-if has("win16") || has("win32")
-  set wildignore+=.git\*,.hg\*,.svn\*
-else
-  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
-endif
-
-" A buffer becomes hidden when it is abandoned
-set hidden
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -46,6 +34,15 @@ set timeoutlen=100
 " => User Interface
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Avoid garbled characters in Chinese language windows OS
+let $LANG='en'
+set langmenu=en
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+
 " We don't need to see things like -- INSERT -- anymore
 set noshowmode
 
@@ -55,14 +52,22 @@ set nu rnu
 " Always show tabs
 set showtabline=2
 
+" Ignore compiled files
+set wildignore=*.o,*~,*.pyc
+if has("win16") || has("win32")
+  set wildignore+=.git\*,.hg\*,.svn\*
+else
+  set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+endif
+
 " Always show current position
 set ruler
 
 " Height of the command bar, better display for messages
 set cmdheight=2
 
-" Set 7 lines to the cursor - when moving vertically using j/k
-set so=7
+" A buffer becomes hidden when it is abandoned
+set hidden
 
 " Enable highlighting of the current line
 set cursorline
@@ -131,10 +136,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" Set to auto read when a file is changed from the outside
-set autoread
-au FocusGained,BufEnter * checktime
-
 " Horizontal splits will automatically be below
 set splitbelow
 
@@ -151,11 +152,12 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Enable syntax highlighting
 syntax enable
 
-" Support 256 colors
-if !has('gui_running')
+" Enable 256 colors palette in Gnome Terminal
+if $COLORTERM == 'gnome-terminal'
   set t_Co=256
 endif
 
+" Enable theming support
 if (has("termguicolors"))
   set termguicolors
 endif
@@ -164,6 +166,8 @@ endif
 if has("gui_running")
   set guioptions-=T
   set guioptions-=e
+  " Support 256 colors
+  set t_Co=256
   set guitablabel=%M\ %t
 endif
 

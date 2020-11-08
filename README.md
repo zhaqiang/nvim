@@ -2,7 +2,9 @@
 
 When people ask me to recommend a text editor:
 
-<p align="center"> <img src="images/editor-to-recommend.jpeg"> </p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/zhaqiang/nvim/master/images/editor-to-recommend.jpeg">
+</p>
 
 ## Configurate
 
@@ -18,3 +20,4 @@ ln -sfv ~/.config/nvim/vimrc ~/.vimrc
 - [amix / vimrc: The ultimate Vim configuration (vimrc)](https://github.com/amix/vimrc)
 - [ChristianChiarulli / nvim: Truly the Ultimate Neovim Config NVCode](https://github.com/ChristianChiarulli/nvim)
 - [SpaceVim / SpaceVim: A community-driven modular vim distribution - The ultimate vim configuration](https://github.com/SpaceVim/SpaceVim)
+- [chemzqm / vimrc](https://github.com/chemzqm/vimrc)
