@@ -23,6 +23,10 @@ if (has("autocmd") && !has("gui_running"))
   augroup END
 endif
 
-colorscheme onedark
+try
+  colorscheme onedark
+catch
+endtry
+
 let g:onedark_hide_endofbuffer=1
 let g:onedark_termcolors=256

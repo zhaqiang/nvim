@@ -33,9 +33,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/itchyny/lightline.vim
   Plug 'itchyny/lightline.vim'
 
-  " Tabline customization with buffer filtering
-  " https://github.com/mg979/vim-xtabline
-  Plug 'mg979/vim-xtabline'
+  " A lightweight plugin to display the list of buffers in the lightline vim plugin
+  " https://github.com/mengelbrecht/lightline-bufferline
+  Plug 'mengelbrecht/lightline-bufferline'
 
   " Delete buffers and close files in Vim without closing your windows or messing up your layout
   " https://github.com/moll/vim-bbye
@@ -130,9 +130,21 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/RRethy/vim-hexokinase
   Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
+  " TypeScript syntax files for Vim
+  " https://github.com/leafgarland/typescript-vim
+  Plug 'leafgarland/typescript-vim'
+
+  " React JSX syntax highlighting for vim and Typescript
+  " https://github.com/peitalin/vim-jsx-typescript
+  Plug 'peitalin/vim-jsx-typescript'
+
   " Use nvim/vim's builtin terminal in the floating/popup window
   " https://github.com/voldikss/vim-floaterm
   Plug 'voldikss/vim-floaterm'
+
+  " A Vim alignment plugin
+  " https://github.com/junegunn/vim-easy-align
+  Plug 'junegunn/vim-easy-align'
 
   " Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more
   " https://github.com/ryanoasis/vim-devicons
