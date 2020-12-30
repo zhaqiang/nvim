@@ -15,6 +15,25 @@ git clone git@github.com:zhaqiang/nvim.git ~/.config/nvim
 ln -sfv ~/.config/nvim/vimrc ~/.vimrc
 ```
 
+## nvim
+
+```
+brew install nvim
+brew install lua
+brew install yarn
+python -m pip install -U pip
+pip3 install pynvim --user
+pip3 install neovim-remote
+pip2 install pynvim --user
+gem install neovim
+yarn global add neovim
+nvim --headless +PlugInstall +qall > /dev/null 2>&1
+# install https://github.com/ryanoasis/nerd-fonts
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+nvim # and run `checkhealth`
+```
+
 ## References
 
 - [amix / vimrc: The ultimate Vim configuration (vimrc)](https://github.com/amix/vimrc)
