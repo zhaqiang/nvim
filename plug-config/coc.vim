@@ -1,7 +1,6 @@
 " https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions#implemented-coc-extensions
 let g:coc_global_extensions = [
       \ 'coc-actions',
-      \ 'coc-bookmark',
       \ 'coc-css',
       \ 'coc-cssmodules',
       \ 'coc-diagnostic',
