@@ -34,6 +34,14 @@ brew install --cask font-hack-nerd-font
 nvim # and run `checkhealth`
 ```
 
+## Upgrade Plugins
+
+```
+# open nvim and type `:`
+PlugUpdate coc.nvim
+CocUpdate
+```
+
 ## References
 
 - [amix / vimrc: The ultimate Vim configuration (vimrc)](https://github.com/amix/vimrc)
