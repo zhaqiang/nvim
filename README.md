@@ -31,6 +31,11 @@ nvim --headless +PlugInstall +qall > /dev/null 2>&1
 # install https://github.com/ryanoasis/nerd-fonts
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
+
+# https://github.com/rlue/vim-barbaric
+curl -o /usr/local/bin/xkbswitch https://raw.githubusercontent.com/myshov/xkbswitch-macosx/master/bin/xkbswitch
+chmod +x /usr/local/bin/xkbswitch
+
 nvim # and run `checkhealth`
 ```
 

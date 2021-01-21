@@ -49,6 +49,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " https://github.com/liuchengxu/vim-which-key
   Plug 'liuchengxu/vim-which-key'
 
+  " Automatic input method switching for vim
+  " https://github.com/rlue/vim-barbaric
+  Plug 'rlue/vim-barbaric'
+
   " Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode
   " https://github.com/neoclide/coc.nvim
   Plug 'neoclide/coc.nvim', { 'branch': 'release' }
